@@ -9,6 +9,10 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
     <meta charset="utf-8" />
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
+
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link href="https://cdn.jsdelivr.net/npm/gijgo@1.9.6/css/gijgo.min.css" rel="stylesheet" type="text/css" />
@@ -37,6 +41,62 @@
             });
         });
     </script>
+
+    <script type="text/javascript">
+    jQuery.validator.setDefaults({
+    highlight: function(element, errorClass, validClass) {
+        if ($(element).closest('.input-group').length > 0) {
+            $(element).closest('.form-row').removeClass('has-error').addClass('has-error');
+        } else {
+            if (element.type === "radio") {
+                this.findByName(element.name).addClass(errorClass).removeClass(validClass);
+            } else {
+                $(element).closest('.form-row').removeClass('has-success has-feedback').addClass('has-error has-feedback');
+                if ($(element).closest('form').hasClass('form-horizontal')) {
+                    $(element).closest('.form-row > div[class^="col"]').find('i.fa').remove();
+                    $(element).closest('.form-row > div[class^="col"]').append('<i class="fa fa-exclamation fa-lg form-control-feedback"></i>');
+                } else {
+                    $(element).closest('.form-row').find('i.fa').remove();
+                    $(element).closest('.form-row').append('<i class="fa fa-exclamation fa-lg form-control-feedback"></i>');
+                }
+            }
+        }
+    },
+    unhighlight: function(element, errorClass, validClass) {
+        if ($(element).closest('.input-group').length > 0) {
+            $(element).closest('.form-row').removeClass('has-error').addClass('has-success');
+        } else {
+            if (element.type === "radio") {
+                this.findByName(element.name).removeClass(errorClass).addClass(validClass);
+            } else {
+                if ($(element).closest('form').hasClass('form-horizontal')) {
+                    $(element).closest('.form-row > div[class^="col"]').find('i.fa').remove();
+                    $(element).closest('.form-row').removeClass('has-error has-feedback').addClass('has-success has-feedback');
+                } else {
+                    $(element).closest('.form-row').removeClass('has-error has-feedback').addClass('has-success has-feedback');
+                    $(element).closest('.form-row').find('i.fa').remove();
+                    $(element).closest('.form-row').append('<i class="fa fa-check fa-lg form-control-feedback"></i>');
+                }
+            }
+        }
+    },
+    errorPlacement: function(error, element) {
+        if (element.parent('.input-group').length) {
+            error.insertAfter(element.parent());
+        } else if (element.parent('.radio-inline').length) {
+            error.insertAfter(element.parent().parent());
+        } else {
+            error.insertAfter(element);
+        }
+    },
+    errorElement: 'span',
+    errorClass: 'help-block',
+    ignore: ''
+});
+$('form[data-toggle="validate"]').validate();
+</script>
+
+
 </head>
 <body style="background-color:#bee5eb;">
 
@@ -48,8 +108,8 @@
 <div class="container" style=" background-color:white; " >
   <h4>Profile</h4>
   <hr></hr>
-  <form>
-  
+  <form data-toggle="validate" role="form">
+
   <div class="form-row">
     <div class="col-md-6 mb-3">
       <label for="validationDefault01">First name</label>
@@ -63,7 +123,7 @@
   <div class="form-row">
       <div class="col-md-6 mb-3">
       <label for="validationDefault03">Describe yourself</label>
-      <textarea class="form-control" rows="2" id="validationDefault03" placeholder="Hi my name id piyush..." required></textarea>    
+      <textarea class="form-control" rows="2" id="validationDefault03" placeholder="Hi my name id piyush..." required></textarea>
       </div>
  </div>
   <div class="form-row">
@@ -76,7 +136,7 @@
       <input type="text" class="form-control" id="validationDefault05" placeholder="Designation" maxlength=50 minlength=3 required>
     </div>
   </div>
- 
+
   <div class="form-row">
     <div class="col-md-6 mb-3">
       <label for="validationDefault06">Country</label>
@@ -330,7 +390,7 @@
 	<option value="YE">Yemen</option>
 	<option value="ZM">Zambia</option>
 	<option value="ZW">Zimbabwe</option>
-	</select> 
+	</select>
     </div>
     <div class="col-md-6 mb-3" class="gj-margin-top-10" class="alert alert-info" role="alert">
       <label for="datepicker">Date of Joining</label>
@@ -340,17 +400,17 @@
 
 
 
-  <div class="form-row" > 
-		
+  <div class="form-row" >
+
 	<div class="col-md-6 mb-3" >
 		<div class="alert alert-info">
 		<label for="linkedin">Linkedin Profile(Optional) </label>
-		<input type="text" class="form-control"  id="linkedin" maxlength=20 required>
+		<input type="text" class="form-control" name="linkedin" id="linkedin" maxlength=20 required>
 		<p>This section is optional to fill in.</p>
 	</div></div>
   </div>
 
-<div class="form-row"  > 	
+<div class="form-row"  >
 	<div class="col-md-6 mb-3">
 		<div class="alert alert-info">
 		<label for="insta">Instagram Profile(Optional)</label>
@@ -361,12 +421,12 @@
 
 
 	<button type="button" class="btn btn-primary" id="save">Save</button>
-	<button type="button" class="btn btn-primary" id="cancel">Cancel</button>
-	
+	<button class="btn btn-danger" type="reset">Cancel</button>
+
 </form>
-  
+
 </div>
 </body>
 
 
-</html> 
+</html>
