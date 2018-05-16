@@ -1,0 +1,429 @@
+<!-- Pushed by piyush nalawade on 16 may 2018 2.45 -->
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Simple Token form</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    <meta charset="utf-8" />
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.14.0/jquery.validate.min.js" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow" rel="stylesheet">
+
+<style>
+
+@media only screen and  (min-width:1200px) and (max-width:578px) {
+
+#hello
+{
+  width:100%;
+}
+}
+
+@media only screen and  (min-width:1200px) {
+
+#hello
+{
+  width:80%;
+}
+}
+
+</style>
+
+
+  </head>
+
+  <body  style="background-color:#D2E3E5; margin-bottom:30px ">
+
+  <div class="container-fluid" style="margin-bottom:10px;  background-color:white;">
+     <img src="ost.png" height=40 width=80 alt="OST Simple token" style="padding:5px">
+     <br>
+  </div>
+
+    <div class="container-fluid" id="hello" style=" background-color:white; ">
+      <h4 style="padding-top:10px; font-size: 20px; text-transform: capitalize; fontcolor:#597AB4; letter-spacing:1.75px">Profile</h4>
+      <hr></hr>
+
+      <div class="form-row">
+        <div class="col-md-12 order-md-1">
+
+          <form name="registration" class="needs-validation" novalidate>
+
+            <div class="form-row" >
+              <div class="col-md-6 mb-3">
+                <label for="firstName" style="font-size: 13px; text-transform: uppercase; color:#8eb9ce; letter-spacing:1.75px;">First name</label>
+                <input type="text" style="fontcolor:#597AB4; font-size: 16px; border:solid; font-family: 'PT Sans Narrow', sans-serif; border-width: 2px; border-color:#D2E3E5" class="form-control" id="firstName"   pattern="^[a-zA-Z. ]*$" name="firstName" placeholder="" value=""  minlength="3" maxlength="50"  required>
+                <div class="invalid-feedback">
+                  Valid first name with length 3 to 50 and a-zA-Z. is required.
+                </div>
+              </div>
+              <div class="col-md-6 mb-3">
+                <label for="lastName"style="font-size: 13px; text-transform: uppercase; color:#8eb9ce; letter-spacing:1.75px">Last name</label>
+                <input type="text" style="fontcolor:#597AB4; font-size: 16px; border:solid; font-family: 'PT Sans Narrow', sans-serif;border-width: 2px; border-color:#D2E3E5"  pattern="^[a-zA-Z. ]*$" class="form-control" minlength="3" maxlength="50"  id="lastName" name="lastName" placeholder="" value="" required>
+                <div class="invalid-feedback">
+                  Valid last name with length 3 to 50 and a-zA-Z. is required.
+                </div>
+              </div>
+            </div>
+
+            <div class="form-row">
+                <div class="col-md-6 mb-3">
+                <label for="validationDefault03" style="font-size: 13px; text-transform: uppercase; color:#8eb9ce; letter-spacing:1.75px">Describe yourself</label>
+                <textarea class="form-control" style="fontcolor:#597AB4; font-size: 16px;font-family: 'PT Sans Narrow', sans-serif; border:solid; border-width: 2px; border-color:#D2E3E5"   maxlength="220" minlength="5"  id="validationDefault03" name="validationDefault03" placeholder="Hi my name id piyush..." required></textarea>
+  <div class="invalid-feedback">Valid description with length 5 to 220 characters required</div>
+                </div>
+           </div>
+            <div class="form-row">
+              <div class="col-md-6 mb-3">
+                <label for="validationDefault04" style="font-size: 13px; text-transform: uppercase; color:#8eb9ce; letter-spacing:1.75px">Company Name</label>
+                <input type="text" pattern="^[0-9a-zA-Z-. ]*$" style="fontcolor:#597AB4;font-family: 'PT Sans Narrow', sans-serif; font-size: 16px; border:solid; border-width: 2px; border-color:#D2E3E5"  class="form-control" id="validationDefault04"  minlength="3" maxlength="50" name="validationDefault04" placeholder="Company name"  required>
+  <div class="invalid-feedback">Valid Company name with ^[0-9a-zA-Z-. ]*$ required</div>
+              </div>
+              <div class="col-md-6 mb-3">
+                <label for="validationDefault05" style="font-size: 13px; text-transform: uppercase; color:#8eb9ce; letter-spacing:1.75px ">Designation</label>
+                <input type="text" style="fontcolor:#597AB4; font-size: 16px; border:solid; border-width: 2px;font-family: 'PT Sans Narrow', sans-serif; border-color:#D2E3E5"   pattern="^[0-9a-zA-Z-. ]*$" class="form-control" id="validationDefault05"  name="validationDefault05" placeholder="Designation" maxlength=50 minlength=3 required>
+                <div class="invalid-feedback">valid Designation with ^[0-9a-zA-Z-. ]*$ required</div>
+
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="col-md-6 mb-3">
+                <label for="validationDefault06"  style="font-size: 13px; text-transform: uppercase; color:#8eb9ce; letter-spacing:1.75px">Country</label>
+
+          	<select name="Country"  class="custom-select" id="validationDefault06" name="validationDefault06"  style="fontcolor:#597AB4; border-color:#6c9ba9; border-width: 2px; font-size: 16px; border-width: 2px; font-family: 'PT Sans Narrow', sans-serif; font-size: 16px;"  required>
+            <option style="color:#597AB4; font-size: 16px;"  value=""> Select Country  </option>
+          	<option  style="color:#597AB4; font-size: 16px;" value="AF">Afghanistan</option>
+          	<option  style="color:#597AB4; font-size: 16px;" value="AX">Åland Islands</option>
+          	<option  style="color:#597AB4; font-size: 16px;" value="AL">Albania</option>
+          	<option style="color:#597AB4; font-size: 16px;"  value="DZ">Algeria</option>
+          	<option style="color:#597AB4; font-size: 16px;"  value="AS">American Samoa</option>
+          	<option  style="color:#597AB4; font-size: 16px;" value="AD">Andorra</option>
+          	<option  style="color:#597AB4; font-size: 16px;" value="AO">Angola</option>
+          	<option  style="color:#597AB4; font-size: 16px;" value="AI">Anguilla</option>
+          	<option  style="color:#597AB4; font-size: 16px;" value="AQ">Antarctica</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="AG">Antigua and Barbuda</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="AR">Argentina</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="AM">Armenia</option>
+          	<option style="color:#597AB4; font-size: 16px;"  value="AW">Aruba</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="AU">Australia</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="AT">Austria</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="AZ">Azerbaijan</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="BS">Bahamas</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="BH">Bahrain</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="BD">Bangladesh</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="BB">Barbados</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="BY">Belarus</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="BE">Belgium</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="BZ">Belize</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="BJ">Benin</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="BM">Bermuda</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="BT">Bhutan</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="BO">Bolivia, Plurinational State of</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="BQ">Bonaire, Sint Eustatius and Saba</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="BA">Bosnia and Herzegovina</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="BW">Botswana</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="BV">Bouvet Island</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="BR">Brazil</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="IO">British Indian Ocean Territory</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="BN">Brunei Darussalam</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="BG">Bulgaria</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="BF">Burkina Faso</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="BI">Burundi</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="KH">Cambodia</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="CM">Cameroon</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="CA">Canada</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="CV">Cape Verde</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="KY">Cayman Islands</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="CF">Central African Republic</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="TD">Chad</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="CL">Chile</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="CN">China</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="CX">Christmas Island</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="CC">Cocos (Keeling) Islands</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="CO">Colombia</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="KM">Comoros</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="CG">Congo</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="CD">Congo, the Democratic Republic of the</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="CK">Cook Islands</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="CR">Costa Rica</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="CI">Côte d'Ivoire</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="HR">Croatia</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="CU">Cuba</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="CW">Curaçao</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="CY">Cyprus</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="CZ">Czech Republic</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="DK">Denmark</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="DJ">Djibouti</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="DM">Dominica</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="DO">Dominican Republic</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="EC">Ecuador</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="EG">Egypt</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="SV">El Salvador</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="GQ">Equatorial Guinea</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="ER">Eritrea</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="EE">Estonia</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="ET">Ethiopia</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="FK">Falkland Islands (Malvinas)</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="FO">Faroe Islands</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="FJ">Fiji</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="FI">Finland</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="FR">France</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="GF">French Guiana</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="PF">French Polynesia</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="TF">French Southern Territories</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="GA">Gabon</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="GM">Gambia</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="GE">Georgia</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="DE">Germany</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="GH">Ghana</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="GI">Gibraltar</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="GR">Greece</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="GL">Greenland</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="GD">Grenada</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="GP">Guadeloupe</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="GU">Guam</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="GT">Guatemala</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="GG">Guernsey</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="GN">Guinea</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="GW">Guinea-Bissau</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="GY">Guyana</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="HT">Haiti</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="HM">Heard Island and McDonald Islands</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="VA">Holy See (Vatican City State)</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="HN">Honduras</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="HK">Hong Kong</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="HU">Hungary</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="IS">Iceland</option>
+          	<option style="color:#597AB4; font-size: 16px;"  value="IN">India</option>
+          	<option style="color:#597AB4; font-size: 16px;"   value="ID">Indonesia</option>
+          	<option style="color:#597AB4; font-size: 16px;"  value="IR">Iran, Islamic Republic</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="IQ">Iraq</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="IE">Ireland</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="IM">Isle of Man</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="IL">Israel</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="IT">Italy</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="JM">Jamaica</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="JP">Japan</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="JE">Jersey</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="JO">Jordan</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="KZ">Kazakhstan</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="KE">Kenya</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="KI">Kiribati</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="KP">Korea, Democratic People's Republic of</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="KR">Korea, Republic of</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="KW">Kuwait</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="KG">Kyrgyzstan</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="LA">Lao People's Democratic Republic</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="LV">Latvia</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="LB">Lebanon</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="LS">Lesotho</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="LR">Liberia</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="LY">Libya</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="LI">Liechtenstein</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="LT">Lithuania</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="LU">Luxembourg</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="MO">Macao</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="MK">Macedonia, the former Yugoslav Republic of</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="MG">Madagascar</option>
+          	<option style="color:#597AB4; font-size: 16px;" style="color:#597AB4; font-size: 16px;" value="MW">Malawi</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="MY">Malaysia</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="MV">Maldives</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="ML">Mali</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="MT">Malta</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="MH">Marshall Islands</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="MQ">Martinique</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="MR">Mauritania</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="MU">Mauritius</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="YT">Mayotte</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="MX">Mexico</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="FM">Micronesia, Federated States of</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="MD">Moldova, Republic of</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="MC">Monaco</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="MN">Mongolia</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="ME">Montenegro</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="MS">Montserrat</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="MA">Morocco</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="MZ">Mozambique</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="MM">Myanmar</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="NA">Namibia</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="NR">Nauru</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="NP">Nepal</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="NL">Netherlands</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="NC">New Caledonia</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="NZ">New Zealand</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="NI">Nicaragua</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="NE">Niger</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="NG">Nigeria</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="NU">Niue</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="NF">Norfolk Island</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="MP">Northern Mariana Islands</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="NO">Norway</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="OM">Oman</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="PK">Pakistan</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="PW">Palau</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="PS">Palestinian Territory, Occupied</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="PA">Panama</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="PG">Papua New Guinea</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="PY">Paraguay</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="PE">Peru</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="PH">Philippines</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="PN">Pitcairn</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="PL">Poland</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="PT">Portugal</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="PR">Puerto Rico</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="QA">Qatar</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="RE">Réunion</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="RO">Romania</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="RU">Russian Federation</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="RW">Rwanda</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="BL">Saint Barthélemy</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="SH">Saint Helena, Ascension and Tristan da Cunha</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="KN">Saint Kitts and Nevis</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="LC">Saint Lucia</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="MF">Saint Martin (French part)</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="PM">Saint Pierre and Miquelon</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="VC">Saint Vincent and the Grenadines</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="WS">Samoa</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="SM">San Marino</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="ST">Sao Tome and Principe</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="SA">Saudi Arabia</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="SN">Senegal</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="RS">Serbia</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="SC">Seychelles</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="SL">Sierra Leone</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="SG">Singapore</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="SX">Sint Maarten (Dutch part)</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="SK">Slovakia</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="SI">Slovenia</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="SB">Solomon Islands</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="SO">Somalia</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="ZA">South Africa</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="GS">South Georgia and the South Sandwich Islands</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="SS">South Sudan</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="ES">Spain</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="LK">Sri Lanka</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="SD">Sudan</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="SR">Suriname</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="SJ">Svalbard and Jan Mayen</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="SZ">Swaziland</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="SE">Sweden</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="CH">Switzerland</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="SY">Syrian Arab Republic</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="TW">Taiwan, Province of China</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="TJ">Tajikistan</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="TZ">Tanzania, United Republic of</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="TH">Thailand</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="TL">Timor-Leste</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="TG">Togo</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="TK">Tokelau</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="TO">Tonga</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="TT">Trinidad and Tobago</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="TN">Tunisia</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="TR">Turkey</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="TM">Turkmenistan</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="TC">Turks and Caicos Islands</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="TV">Tuvalu</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="UG">Uganda</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="UA">Ukraine</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="AE">United Arab Emirates</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="GB">United Kingdom</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="US">United States</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="UM">United States Minor Outlying Islands</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="UY">Uruguay</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="UZ">Uzbekistan</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="VU">Vanuatu</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="VE">Venezuela, Bolivarian Republic of</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="VN">Viet Nam</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="VG">Virgin Islands, British</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="VI">Virgin Islands, U.S.</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="WF">Wallis and Futuna</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="EH">Western Sahara</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="YE">Yemen</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="ZM">Zambia</option>
+          	<option style="color:#597AB4; font-size: 16px;" value="ZW">Zimbabwe</option>
+          	</select>
+                <div class="invalid-feedback">Valid country required</div>
+              </div>
+              <div class="col-md-6 mb-3" >
+              <label for="example-date-input"style="font-size: 13px; text-transform: uppercase; color:#8eb9ce; letter-spacing:1.75px" >Date</label>
+                <input style="fontcolor:#597AB4; font-family: 'PT Sans Narrow', sans-serif; font-size: 16px;"  class="form-control" type="date" id="example-date-input"  name="example-date-input" required>
+<div class="invalid-feedback">Example invalid custom select feedback</div>
+            </div>
+            </div>
+
+
+            <div class="form-row" >
+          	<div class="col-md-6 mb-3" >
+          		<div class="alert alert-info">
+          		<label for="linkedin" style="font-size: 13px; text-transform: uppercase; color:#8eb9ce; letter-spacing:1.75px">Linkedin Profile  <i style="text-transform: lowercase;"> (Optional)</i> </label>
+          		<input  style="fontcolor:#597AB4; border-color:#6c9ba9; border-width: 2px; font-size: 16px; font-family: 'PT Sans Narrow', sans-serif;"  class="form-control" pattern="^(http:\/\/www\.|https:\/\/www\.|http:\/\/|https:\/\/)?[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$"   maxlength="25" name="linkedin" id="linkedin" maxlength=20 >
+              <div class="invalid-feedback">Valid url required with https or http or www</div>
+          		<p style="font-family: 'PT Sans Narrow', sans-serif;">This section is optional to fill in.</p>
+          	</div></div>
+            </div>
+
+          <div class="form-row"  >
+          	<div class="col-md-6 mb-3">
+          		<div class="alert alert-info">
+          		<label for="insta" style="font-size: 13px; text-transform: uppercase; color:#8eb9ce; letter-spacing:1.75px">Instagram Profile  <i style="text-transform: lowercase;">(Optional)</i></label>
+          		<input  style="fontcolor:#597AB4; border-color:#6c9ba9; border-width: 2px; font-size: 16px;font-family: 'PT Sans Narrow', sans-serif;"  class="form-control"  pattern="^(http:\/\/www\.|https:\/\/www\.|http:\/\/|https:\/\/)?[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$" maxlength="25" id="insta" maxlength=20 >
+
+              <div class="invalid-feedback">Valid url required with https or http or www</div>
+<p style="font-family: 'PT Sans Narrow', sans-serif;">This section is optional to fill in.</p>
+            </div></div>
+          </div>
+
+          <button type="submit" class="btn btn-primary" style="text-transform: uppercase; margin-bottom: 15px; font-family: 'PT Sans Narrow', sans-serif; border-color:#e4b030 ; background-color: #e4b030;  letter-spacing:1.75px ">Save</button>
+          <input class="btn btn-primary" type="reset" value="Reset" style=" text-transform: uppercase; margin-bottom:15px; font-family: 'PT Sans Narrow', sans-serif; border-color:#b4d1de ;letter-spacing:1.75px">
+
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+   <script src="js/myjs.js" </script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<!--
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script src="../../assets/js/vendor/popper.min.js"></script>
+    <script src="../../dist/js/bootstrap.min.js"></script>
+    <script src="../../assets/js/vendor/holder.min.js"></script> -->
+<!--
+    <script>
+      // Example starter JavaScript for disabling form submissions if there are invalid fields
+      (function() {
+        'use strict';
+
+        window.addEventListener('load', function() {
+          // Fetch all the forms we want to apply custom Bootstrap validation styles to
+          var forms = document.getElementsByClassName('needs-validation');
+
+          // Loop over them and prevent submission
+          var validation = Array.prototype.filter.call(forms, function(form) {
+            form.addEventListener('submit', function(event) {
+              if (form.checkValidity() === false) {
+                event.preventDefault();
+                event.stopPropagation();
+              }
+              form.classList.add('was-validated');
+            }, false);
+          });
+        }, false);
+      })();
+    </script>-->
+  </body>
+</html>
